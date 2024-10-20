@@ -4,8 +4,8 @@ This extension is designed for users who frequently work with multiple programmi
 
 ## Language Switch
 
-- [English](./README.md)
-- [简体中文](./README.zh-cn.md)
+- [English](https://github.com/Allergy527/Allergy-select-launch/blob/main/README.md)
+- [简体中文](https://github.com/Allergy527/Allergy-select-launch/blob/main/README.zh-cn.md)
 
 ## Features
 

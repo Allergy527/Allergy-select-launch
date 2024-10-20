@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import * as path from 'path';
 import * as fs from 'fs';
 import * as nls from 'vscode-nls';
+import * as jsonc from 'jsonc-parser';
 
 const localize = nls.config({ messageFormat: nls.MessageFormat.file })();
 
@@ -36,7 +37,8 @@ async function handleTaskAndDebug(fileExtension: string, buildTaskLabel: string,
 		return;
 	}
 	const configContent = fs.readFileSync(configPath, 'utf8');
-	const launchConfig = JSON.parse(configContent);
+	const launchConfig = jsonc.parse(configContent);
+
 	const chosenConfig = launchConfig.configurations.find((config: any) => config.name === debugConfigName);
 	if (chosenConfig) {
 		vscode.debug.startDebugging(undefined, chosenConfig);
@@ -58,7 +60,9 @@ async function getBuildTaskLabel(fileExtension: string): Promise<string | undefi
 		return undefined;
 	}
 
-	const tasksConfig = JSON.parse(fs.readFileSync(tasksConfigPath, 'utf-8'));
+	const fileContent = fs.readFileSync(tasksConfigPath, 'utf-8');
+	const tasksConfig = jsonc.parse(fileContent);
+
 	const buildTask = tasksConfig.tasks.find((task: any) => task.label.endsWith('_Build') && task.label.startsWith(fileExtension));
 
 	if (buildTask) {
@@ -80,8 +84,9 @@ async function getDebugConfigName(fileExtension: string): Promise<string | undef
 		vscode.window.showErrorMessage(localize('error.noLaunchConfigFound', 'No launch.json file found.'));
 		return undefined;
 	}
+	const fileContent = fs.readFileSync(launchConfigPath, 'utf-8');
+	const launchConfig = jsonc.parse(fileContent);
 
-	const launchConfig = JSON.parse(fs.readFileSync(launchConfigPath, 'utf-8'));
 	const debugConfig = launchConfig.configurations.find((config: any) => config.name.endsWith('_Debug') && config.name.startsWith(fileExtension));
 
 	if (debugConfig) {

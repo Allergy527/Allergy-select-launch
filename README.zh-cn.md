@@ -2,8 +2,8 @@
 
 > 这个文档有着多语言支持:
 
-- [English](./README.md)
-- [简体中文](./README.zh-cn.md)
+- [English](https://github.com/Allergy527/Allergy-select-launch/blob/main/README.md)
+- [简体中文](https://github.com/Allergy527/Allergy-select-launch/blob/main/README.zh-cn.md)
 
 这个扩展目的是为平日里有多语言刷题需求的用户实现F5一键运行launch.json而无需手动选择启动配置。
 

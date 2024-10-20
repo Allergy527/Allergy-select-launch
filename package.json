@@ -2,11 +2,15 @@
   "name": "allergy-select-launch",
   "displayName": "Allergy-Select-launch.json",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.94.0"
   },
   "publisher": "Allergy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/your-repo-name"
+  },
   "categories": [
     "Other"
   ],
@@ -33,7 +37,7 @@
         "localizedLanguageName": "简体中文",
         "translations": [
           {
-            "id": "package",
+            "id": "Allergy.allergy-select-launch",
             "path": "./i18n/package.nls.zh-cn.json"
           }
         ]
@@ -60,6 +64,7 @@
     "typescript": "^5.6.2"
   },
   "dependencies": {
+    "jsonc-parser": "^3.3.1",
     "vscode-nls": "^5.2.0"
   }
 }

@@ -1,0 +1,9 @@
+{
+    "error.buildTaskNotFound": "编译任务'{0}'未找到",
+    "error.noWorkspaceFolderOpen": "没有打开的工作区文件夹",
+    "error.noLaunchConfigFound": "在{0}中没有找到launch.json文件",
+    "error.noSuitableConfig": "没有找到适合{0}的配置",
+    "error.noTasksConfigFound": "没有找到tasks.json",
+    "error.noFileOpen": "未打开文件",
+    "error.noSuitableBuildOrDebugConfig": "没有找到适合{0}的编译或调试方法"
+}

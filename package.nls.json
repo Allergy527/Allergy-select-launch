@@ -1,0 +1,9 @@
+{
+    "error.buildTaskNotFound": "Build task '{0}' not found!",
+    "error.noWorkspaceFolderOpen": "No workspace folder is open.",
+    "error.noLaunchConfigFound": "No launch.json file found at {0}.",
+    "error.noSuitableConfig": "No suitable configuration found for {0}.",
+    "error.noTasksConfigFound": "No tasks.json file found.",
+    "error.noFileOpen": "No file open.",
+    "error.noSuitableBuildOrDebugConfig": "No suitable build or debug configuration found for {0}."
+}

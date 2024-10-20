@@ -1,0 +1,65 @@
+{
+  "name": "allergy-select-launch",
+  "displayName": "Allergy-Select-launch.json",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "publisher": "Allergy",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.runLaunchFile",
+        "title": "Run Language Specific Launch"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.runLaunchFile",
+        "key": "F5",
+        "when": "editorTextFocus"
+      }
+    ],
+    "localization": [
+      {
+        "languageId": "zh-cn",
+        "languageName": "Chinese",
+        "localizedLanguageName": "简体中文",
+        "translations": [
+          {
+            "id": "package",
+            "path": "./i18n/package.nls.zh-cn.json"
+          }
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.8",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.94.0",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.11.1",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "vscode-nls": "^5.2.0"
+  }
+}

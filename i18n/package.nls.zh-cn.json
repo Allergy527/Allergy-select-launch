@@ -5,5 +5,6 @@
     "error.noSuitableConfig": "没有找到适合{0}的配置",
     "error.noTasksConfigFound": "没有找到tasks.json",
     "error.noFileOpen": "未打开文件",
-    "error.noSuitableBuildOrDebugConfig": "没有找到适合{0}的编译或调试方法"
+    "error.noSuitableBuildOrDebugConfig": "没有找到适合{0}文件的调试方法",
+    "yourExtension.customDebugSuffix": "用于在 launch.json 中标识调试配置的后缀。默认为 '_Debug'。"
 }

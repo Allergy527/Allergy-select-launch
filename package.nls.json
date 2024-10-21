@@ -5,5 +5,6 @@
     "error.noSuitableConfig": "No suitable configuration found for {0}.",
     "error.noTasksConfigFound": "No tasks.json file found.",
     "error.noFileOpen": "No file open.",
-    "error.noSuitableBuildOrDebugConfig": "No suitable build or debug configuration found for {0}."
+    "error.noSuitableBuildOrDebugConfig": "No suitable debug configuration found for {0}.",
+    "yourExtension.customDebugSuffix": "Suffix used to identify debug configurations in launch.json. Default is '_Debug'."
 }

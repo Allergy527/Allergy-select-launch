@@ -2,7 +2,7 @@
   "name": "allergy-select-launch",
   "displayName": "Allergy-Select-launch.json",
   "description": "",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.94.0"
   },
@@ -42,7 +42,18 @@
           }
         ]
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Custom Debug Suffix",
+      "properties": {
+        "yourExtension.customDebugSuffix": {
+          "type": "string",
+          "default": "_Debug",
+          "description": "%yourExtension.customDebugSuffix%"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
